@@ -54,11 +54,8 @@ add_action( 'woocommerce_before_add_to_cart_button', 'vicode_display_field' );
 function vicode_field_validation( $passed, $product_id, $quantity ) {
     if( empty($_FILES['vicode-file-field']["name"]) ) {
         // Fails validation
-        $passed = false;
-        wc_add_notice( __( 'Please attach a pdf', 'vicode' ), 'error' );
-    }
-    else{
-        $passed = true;
+        wc_add_notice( __( 'Please attach a pdf', 'woocommerce' ), 'error' );
+        $passed = false;   
     }
     return $passed;
 }

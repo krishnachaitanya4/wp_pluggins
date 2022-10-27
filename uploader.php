@@ -59,7 +59,7 @@ function vicode_field_validation( $passed, $product_id, $quantity ) {
     }
     return $passed;
 }
-add_filter( 'woocommerce_add_to_cart_validation', 'vicode_field_validation', 10, 3 );
+add_filter( 'pvtfw_woocommerce_add_to_cart_validation', 'vicode_field_validation', 10, 3 );
 
 
 // add field data to the cart
